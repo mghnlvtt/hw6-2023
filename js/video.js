@@ -24,12 +24,13 @@ document.querySelector("#slower").addEventListener("click", function(){
 });
 
 document.querySelector("#skip").addEventListener("click", function(){
-    video.currentTime += 15;
-    console.log("New location in video: "+video.currentTime);
-    if (video.currentTime>67.4033) {
-        console.log("Restarting video");
+    if (video.currentTime + 15 < video.duration) {
+        video.currentTime += 15;
+        console.log("New location in video: "+video.currentTime);
+    }
+    else{
         video.currentTime = 0;
-        video.play();
+        console.log("Restarting video");
     }
 });
 
@@ -61,7 +62,7 @@ document.querySelector("#mute").addEventListener("click", function(){
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
-    video.classList.toggle('oldSchool');
+    video.classList.add('oldSchool');
 });
 
 document.querySelector("#orig").addEventListener("click", function(){
