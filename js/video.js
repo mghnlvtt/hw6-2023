@@ -24,12 +24,12 @@ document.querySelector("#slower").addEventListener("click", function(){
 });
 
 document.querySelector("#skip").addEventListener("click", function(){
-    if (video.currentTime + 15 < video.duration) {
-        video.currentTime += 15;
+    if (video.currentTime + 10 < video.duration) {
+        video.currentTime += 10;
         console.log("New location in video: "+video.currentTime);
     }
     else{
-        video.currentTime = 0;
+        video.currentTime = 0
         console.log("Restarting video");
     }
 });
